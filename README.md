@@ -146,3 +146,39 @@ cp -a vendor_blobs/proprietary/vendor/lib64 \
 - **32-bit**: this package is 64-bit only.
 
 Shims (source) remain in `vendor_stubs/` if the stock blobs are not enough.
+
+---
+
+## Full status (what is written)
+
+### Kernel fork (`kukirin-ui/android_kernel_G0335D_msm8996Pro`)
+- Portable `android81_port/build_kernel.sh` (no hardcoded paths)
+- Extracted pieces from a working boot.img:
+  - `extracted/g0335d_candidate.dtb`
+  - `extracted/wlan.ko`
+  - `extracted/kernel_from_boot.img.gz`
+- Packaging scripts:
+  - `android81_port/package_boot.sh`
+  - `android81_port/make_boot_from_extracted.sh`
+  - `android81_port/mkboot_extracted.sh`
+- Basic NT36xxx touchscreen driver (skeleton)
+- Vendor stubs source in `vendor_stubs/` (libmdmdetect + protobuf shim)
+- Stock vendor blobs in `vendor_blobs/proprietary/vendor/lib64/`:
+  - libmdmdetect.so
+  - libcne.so / libcneapiclient.so / libcneqmiutils.so
+  - libdiag.so, libdsutils.so, libidl.so
+  - mmcamera2 stack
+- This README and `FIXES.md`
+
+### Vendor fork (`kukirin-ui/android_vendor_G0335D_msm8996Pro`)
+- Same stock 64-bit libs under `proprietary/vendor/lib64/`
+
+### Not done
+- PRs are not merged on the upstream MizhiDR repos
+- No device test (boot / camera / modem / wifi)
+- Protobuf mismatch on CNE may still appear — shim is the fallback
+- Camera still needs the correct G0335D sensor lib + chromatix
+- NT36xxx is a skeleton (protocol/GPIO not confirmed)
+- DTB is a candidate, not confirmed exact
+
+Nothing has been verified on hardware. Treat everything as untested.
