@@ -146,7 +146,7 @@
 		qcom,mdss-brightness-max-level = <4095>;
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
-		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_wled";
+		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 		qcom,mdss-dsi-reset-sequence = <1 10>, <0 1>, <1 10>;
 		qcom,mdss-pan-physical-width-dimension = <75>;
 		qcom,mdss-pan-physical-height-dimension = <143>;
