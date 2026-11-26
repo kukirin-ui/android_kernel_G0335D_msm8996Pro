@@ -182,3 +182,6 @@ Shims (source) remain in `vendor_stubs/` if the stock blobs are not enough.
 - DTB is a candidate, not confirmed exact
 
 Nothing has been verified on hardware. Treat everything as untested.
+
+## Brightness
+FT8716 panel: bl_ctrl_dcs + TLMM GPIO93 enable (qcom,platform-bklight-en-gpio). Recovery dmesg showed GPIO93 as bklt_en. Overlay: arch/arm64/boot/dts/qcom/g0335d-backlight.dtsi included from the sharp panel dtsi.

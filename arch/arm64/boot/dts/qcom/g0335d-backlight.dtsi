@@ -1,0 +1,4 @@
+/* G0335D: backlight enable on TLMM GPIO93 (from recovery dmesg AQ61/AQ62) */
+&mdss_dsi0 {
+	qcom,platform-bklight-en-gpio = <&tlmm 93 0>;
+};

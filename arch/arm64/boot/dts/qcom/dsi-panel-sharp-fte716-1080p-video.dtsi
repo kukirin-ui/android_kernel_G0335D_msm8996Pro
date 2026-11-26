@@ -162,3 +162,4 @@
 		qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
 	};
 };
+#include "g0335d-backlight.dtsi"
