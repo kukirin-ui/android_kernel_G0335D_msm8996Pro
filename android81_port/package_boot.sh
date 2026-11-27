@@ -8,7 +8,7 @@ ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$ROOT"
 
 OUT="${OUT:-out}"
-DTB="${DTB:-extracted/g0335d_candidate.dtb}"
+DTB="${DTB:-extracted/stock_7.1.2_msm8996pro-v1.1-pmi8996-mtp.dtb}"
 WLAN="${WLAN:-extracted/wlan.ko}"
 KERNEL="${KERNEL:-$OUT/arch/arm64/boot/Image.gz}"
 
